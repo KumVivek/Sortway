@@ -1,0 +1,11 @@
+name: flow_solver
+description: Solver and difficulty metrics for Flow Sort levels.
+version: 1.0.0
+publish_to: none
+resolution: workspace
+environment:
+  sdk: ^3.7.0
+dependencies:
+  flow_core: ^1.0.0
+dev_dependencies:
+  test: ^1.25.0

@@ -1,0 +1,343 @@
+{
+  "@@locale": "en",
+  "appTitle": "Flow Sort",
+  "play": "Play",
+  "levelN": "Level {n}",
+  "@levelN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "levels": "Levels",
+  "album": "Album",
+  "daily": "Daily",
+  "shop": "Shop",
+  "settings": "Settings",
+  "event": "Event",
+  "ok": "OK",
+  "cancel": "Cancel",
+  "close": "Close",
+  "retry": "Try again",
+  "loading": "Loading…",
+  "errorGeneric": "Something went wrong.",
+  "ageTitle": "What year were you born?",
+  "ageBody": "This sets up the game for you. We only keep an age group on this device, never the year.",
+  "ageSelectYear": "Select a year",
+  "ageContinue": "Continue",
+  "ageSkip": "Skip",
+  "resumeTitle": "Continue where you left off?",
+  "resumeBody": "You left {name} unfinished.",
+  "@resumeBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "resume": "Resume",
+  "discard": "Discard",
+  "tutTapSwitch": "Tap the switch to send each item to the bin of the same colour.",
+  "tutLookAhead": "Watch the belt. Flip the switch before the next item drops.",
+  "tutSecondSwitch": "Two switches now. The bright path shows where the next item will go.",
+  "tutLockedTitle": "Locked bins",
+  "tutLockedBody": "A locked bin opens after you deliver the number of items shown on its lock. Send nothing there until it opens.",
+  "tutGateTitle": "Colour gates",
+  "tutGateBody": "A gate repaints every item that passes through it. Use it for items that have no bin of their own.",
+  "gotIt": "Got it",
+  "paused": "Paused",
+  "pause": "Pause",
+  "restart": "Restart",
+  "quitLevel": "Quit level",
+  "itemsLeft": "{n} left",
+  "@itemsLeft": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "go": "Go!",
+  "boosterUndo": "Undo",
+  "boosterLife": "+1 Life",
+  "boosterSlow": "Slow",
+  "notEnoughCoins": "Not enough coins",
+  "getCoins": "Get coins",
+  "watchAd": "Watch ad",
+  "adUnavailable": "No ad is available right now. Try again in a moment.",
+  "adOfferTitle": "Use it for free?",
+  "adOfferBody": "Watch a short video to use this booster without spending coins.",
+  "useCoins": "Use {n} coins",
+  "@useCoins": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "levelComplete": "Level complete!",
+  "coinsEarned": "+{n} coins",
+  "@coinsEarned": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "doubleCoins": "Double coins",
+  "next": "Next",
+  "replay": "Replay",
+  "levelMap": "Level map",
+  "newSticker": "New sticker!",
+  "setCompleteBonus": "Set complete! +{n} coins",
+  "@setCompleteBonus": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "outOfLives": "Out of lives",
+  "failWrongBin": "That item went to the wrong bin.",
+  "failOverflow": "That bin was already full.",
+  "failLocked": "That bin was still locked.",
+  "undoLastItem": "Undo last item",
+  "extraLife": "Extra life",
+  "free": "Free",
+  "hard": "Hard",
+  "setN": "Set {n}",
+  "@setN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "allLevelsDone": "You finished every level! More are on the way.",
+  "albumTitle": "Sticker album",
+  "albumHint": "Finish a new level to earn a sticker.",
+  "countOf": "{have}/{total}",
+  "@countOf": {
+    "placeholders": {
+      "have": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "dailyTitle": "Daily challenge",
+  "dailyBody": "One new level every day, the same for everyone.",
+  "dailyStreak": "{n}-day streak",
+  "@dailyStreak": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "dailyReward": "Reward: {n} coins",
+  "@dailyReward": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "dailyDone": "Done for today. Come back tomorrow!",
+  "dailyPlay": "Play today's level",
+  "dailyName": "Daily challenge",
+  "eventReward": "Finish all {count} levels for {n} coins",
+  "@eventReward": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "eventDone": "Event complete!",
+  "eventLevel": "Event level {n}",
+  "@eventLevel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "shopTitle": "Shop",
+  "removeAds": "Remove ads",
+  "removeAdsDesc": "No more ads between levels. Reward videos stay optional.",
+  "coinPack": "{n} coins",
+  "@coinPack": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "starterPack": "Starter pack",
+  "starterDesc": "{n} coins, one time only",
+  "@starterDesc": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "restorePurchases": "Restore purchases",
+  "purchaseDone": "Thank you! Your purchase is complete.",
+  "purchaseFailed": "The purchase did not go through. You were not charged.",
+  "storeUnavailable": "The store is not available right now.",
+  "owned": "Owned",
+  "restored": "Purchases restored.",
+  "nothingToRestore": "Nothing to restore.",
+  "realMoney": "Costs real money",
+  "gateTitle": "Ask a grown-up",
+  "gateBody": "A parent or guardian needs to answer this to continue:",
+  "gateQuestion": "{a} × {b} = ?",
+  "@gateQuestion": {
+    "placeholders": {
+      "a": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "gateAnswer": "Answer",
+  "gateWrong": "That is not right. Try again.",
+  "gatePrice": "This purchase charges {price} of real money.",
+  "@gatePrice": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "confirm": "Confirm",
+  "sound": "Sound effects",
+  "music": "Music",
+  "haptics": "Vibration",
+  "language": "Language",
+  "languageSystem": "System default",
+  "privacy": "Privacy",
+  "ageReset": "Change age group",
+  "ageResetBody": "You will be asked for your birth year again.",
+  "version": "Version {v}",
+  "@version": {
+    "placeholders": {
+      "v": {
+        "type": "String"
+      }
+    }
+  },
+  "updateTitle": "Update needed",
+  "updateBody": "Please update Flow Sort to keep playing.",
+  "privacyTitle": "Your privacy",
+  "privacyData": "Flow Sort does not ask for your name, email, photos, contacts or location. Your progress, coins and stickers are stored only on this device.",
+  "privacyAge": "We ask for a birth year once and keep only an age group on this device. It decides which rows below apply to you.",
+  "privacyAds": "Ads (Google AdMob): players under 18, or who skipped the age question, only see non-personalized ads rated for general audiences. Adults may see personalized ads, after consent where the law requires it.",
+  "privacyAnalytics": "Analytics (Google Firebase Analytics): collected for adults only, to see which levels are too hard. It is switched off for everyone else.",
+  "privacyCrash": "Crash reports (Google Firebase Crashlytics): technical details of a crash, with no user ID attached.",
+  "privacyPurchases": "Purchases (RevenueCat with Google Play or the App Store): handled by the store. We never see your payment details. Players under 18 need a grown-up to approve.",
+  "privacyNone": "There is no chat, no free-text names and no social features inside the game. Sharing a result opens your device's own share menu; the picture contains only the level and stars, and the game never sees where you post it.",
+  "privacyPolicyLink": "Full privacy policy: {url}",
+  "@privacyPolicyLink": {
+    "placeholders": {
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "privacyContact": "Questions: {email}",
+  "@privacyContact": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "simAdTitle": "Test ad",
+  "simAdBody": "Simulated ad for local testing. Real ads appear in store builds.",
+  "simAdClose": "Close ({n})",
+  "@simAdClose": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "starsLabel": "{n} of 3 stars",
+  "@starsLabel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "livesLabel": "{n} lives",
+  "@livesLabel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "coinsLabel": "{n} coins",
+  "@coinsLabel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "switchLabel": "Switch",
+  "share": "Share",
+  "shareLevelText": "I cleared Level {n} in Flow Sort with {stars} of 3 stars! Can you beat that?",
+  "@shareLevelText": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "stars": {
+        "type": "int"
+      }
+    }
+  },
+  "shareDailyText": "I cleared today's Flow Sort daily challenge with {stars} of 3 stars! Can you beat that?",
+  "@shareDailyText": {
+    "placeholders": {
+      "stars": {
+        "type": "int"
+      }
+    }
+  },
+  "shareEventText": "I cleared event level {n} in Flow Sort with {stars} of 3 stars! Can you beat that?",
+  "@shareEventText": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "stars": {
+        "type": "int"
+      }
+    }
+  },
+  "shareCardTagline": "Can you sort it faster?",
+  "shareFlips": "{n, plural, =1{1 flip} other{{n} flips}}",
+  "@shareFlips": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "gateShareNote": "Sharing opens another app outside the game.",
+  "shareFailed": "Sharing is not available right now."
+}

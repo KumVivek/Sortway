@@ -1,0 +1,9 @@
+name: flow_sort_workspace
+publish_to: none
+environment:
+  sdk: ^3.7.0
+workspace:
+  - packages/flow_core
+  - packages/flow_solver
+  - packages/flow_levelgen
+  - app

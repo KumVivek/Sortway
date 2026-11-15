@@ -1,0 +1,13 @@
+name: flow_levelgen
+description: Level generator, grader and pack exporter for Flow Sort.
+version: 1.0.0
+publish_to: none
+resolution: workspace
+environment:
+  sdk: ^3.7.0
+dependencies:
+  args: ^2.5.0
+  flow_core: ^1.0.0
+  flow_solver: ^1.0.0
+dev_dependencies:
+  test: ^1.25.0

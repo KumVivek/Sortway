@@ -1,0 +1,5 @@
+{
+  "FLAVOR": "dev",
+  "USE_FIREBASE": false,
+  "USE_ADMOB": true
+}

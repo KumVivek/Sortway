@@ -1,0 +1,30 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 3.29.1
+          cache: true
+      - run: sudo apt-get update && sudo apt-get install -y libsqlite3-dev
+      - run: flutter pub get
+      - name: Analyze
+        run: |
+          for p in packages/flow_core packages/flow_solver packages/flow_levelgen; do
+            (cd $p && dart analyze --fatal-infos)
+          done
+          (cd app && flutter analyze)
+      - name: Test packages
+        run: |
+          for p in packages/flow_core packages/flow_solver packages/flow_levelgen; do
+            (cd $p && dart test)
+          done
+      - name: Test app
+        run: cd app && flutter test
