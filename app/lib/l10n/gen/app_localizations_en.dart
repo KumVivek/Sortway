@@ -475,4 +475,62 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get shareFailed => 'Sharing is not available right now.';
+
+  @override
+  String a11yColour(String colour) {
+    String _temp0 = intl.Intl.selectLogic(
+      colour,
+      {
+        'red': 'Red',
+        'blue': 'Blue',
+        'green': 'Green',
+        'yellow': 'Yellow',
+        'purple': 'Purple',
+        'orange': 'Orange',
+        'pink': 'Pink',
+        'other': 'Hidden colour',
+      },
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String a11yBoard(String next, int lives, int left) {
+    String _temp0 = intl.Intl.pluralLogic(
+      lives,
+      locale: localeName,
+      other: '$lives lives',
+      one: '1 life',
+    );
+    String _temp1 = intl.Intl.pluralLogic(
+      left,
+      locale: localeName,
+      other: '$left items',
+      one: '1 item',
+    );
+    return 'Game board. Next item: $next. $_temp0 left. $_temp1 to sort.';
+  }
+
+  @override
+  String get a11yNoItem => 'none';
+
+  @override
+  String a11ySwitch(int n, String dir) {
+    String _temp0 = intl.Intl.selectLogic(
+      dir,
+      {
+        'left': 'left',
+        'other': 'right',
+      },
+    );
+    return 'Switch $n, points $_temp0';
+  }
+
+  @override
+  String get a11ySwitchHint => 'flip the switch';
+
+  @override
+  String a11yBin(String colour, int fill, int capacity) {
+    return '$colour bin, $fill of $capacity';
+  }
 }

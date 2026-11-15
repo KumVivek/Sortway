@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../game/board_semantics.dart';
 import '../../game/flow_game.dart';
 import '../../game/session_controller.dart';
 import '../../providers.dart';
@@ -788,10 +789,13 @@ class _PlayViewState extends ConsumerState<_PlayView>
                       child: Stack(
                         fit: StackFit.expand,
                         children: [
-                          GameWidget<FlowGame>(
-                            key: ObjectKey(game),
-                            game: game,
+                          ExcludeSemantics(
+                            child: GameWidget<FlowGame>(
+                              key: ObjectKey(game),
+                              game: game,
+                            ),
                           ),
+                          BoardSemantics(game: game),
                           IgnorePointer(
                             child: ListenableBuilder(
                               listenable: controller,

@@ -1,0 +1,3 @@
+app_identifier("com.flowsort.flowSort")
+# Apple Developer team id, e.g. "AB12CD34EF".
+team_id(ENV["APPLE_TEAM_ID"]) if ENV["APPLE_TEAM_ID"]

@@ -474,4 +474,62 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get shareFailed => 'अभी शेयर नहीं किया जा सकता।';
+
+  @override
+  String a11yColour(String colour) {
+    String _temp0 = intl.Intl.selectLogic(
+      colour,
+      {
+        'red': 'लाल',
+        'blue': 'नीला',
+        'green': 'हरा',
+        'yellow': 'पीला',
+        'purple': 'बैंगनी',
+        'orange': 'नारंगी',
+        'pink': 'गुलाबी',
+        'other': 'छिपा हुआ रंग',
+      },
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String a11yBoard(String next, int lives, int left) {
+    String _temp0 = intl.Intl.pluralLogic(
+      lives,
+      locale: localeName,
+      other: '$lives जानें',
+      one: '1 जान',
+    );
+    String _temp1 = intl.Intl.pluralLogic(
+      left,
+      locale: localeName,
+      other: '$left चीज़ें',
+      one: '1 चीज़',
+    );
+    return 'गेम बोर्ड। अगली चीज़: $next। $_temp0 बाकी। $_temp1 छाँटनी हैं।';
+  }
+
+  @override
+  String get a11yNoItem => 'कोई नहीं';
+
+  @override
+  String a11ySwitch(int n, String dir) {
+    String _temp0 = intl.Intl.selectLogic(
+      dir,
+      {
+        'left': 'बाईं',
+        'other': 'दाईं',
+      },
+    );
+    return 'स्विच $n, $_temp0 ओर';
+  }
+
+  @override
+  String get a11ySwitchHint => 'स्विच पलटें';
+
+  @override
+  String a11yBin(String colour, int fill, int capacity) {
+    return '$colour डिब्बा, $capacity में से $fill';
+  }
 }

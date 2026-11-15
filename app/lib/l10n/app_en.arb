@@ -339,5 +339,55 @@
     }
   },
   "gateShareNote": "Sharing opens another app outside the game.",
-  "shareFailed": "Sharing is not available right now."
+  "shareFailed": "Sharing is not available right now.",
+  "a11yColour": "{colour, select, red{Red} blue{Blue} green{Green} yellow{Yellow} purple{Purple} orange{Orange} pink{Pink} other{Hidden colour}}",
+  "@a11yColour": {
+    "description": "Spoken item or bin colour for screen readers.",
+    "placeholders": {
+      "colour": {
+        "type": "String"
+      }
+    }
+  },
+  "a11yBoard": "Game board. Next item: {next}. {lives, plural, =1{1 life} other{{lives} lives}} left. {left, plural, =1{1 item} other{{left} items}} to sort.",
+  "@a11yBoard": {
+    "placeholders": {
+      "next": {
+        "type": "String"
+      },
+      "lives": {
+        "type": "int"
+      },
+      "left": {
+        "type": "int"
+      }
+    }
+  },
+  "a11yNoItem": "none",
+  "a11ySwitch": "Switch {n}, points {dir, select, left{left} other{right}}",
+  "@a11ySwitch": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "dir": {
+        "type": "String"
+      }
+    }
+  },
+  "a11ySwitchHint": "flip the switch",
+  "a11yBin": "{colour} bin, {fill} of {capacity}",
+  "@a11yBin": {
+    "placeholders": {
+      "colour": {
+        "type": "String"
+      },
+      "fill": {
+        "type": "int"
+      },
+      "capacity": {
+        "type": "int"
+      }
+    }
+  }
 }

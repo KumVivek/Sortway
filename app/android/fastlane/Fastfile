@@ -1,0 +1,44 @@
+# Uploads the prod app bundle to Google Play.
+#
+# Build first (from app/):
+#   flutter build appbundle --release --flavor prod --dart-define-from-file=config/prod.json
+# then, from app/android:
+#   bundle exec fastlane internal          # internal testing track
+#   bundle exec fastlane promote to:alpha  # internal -> closed testing
+#
+# Until the app has been published once, Play only accepts draft releases, so
+# PLAY_RELEASE_STATUS defaults to "draft". Set it to "completed" afterwards.
+
+default_platform(:android)
+
+AAB = File.expand_path("../../build/app/outputs/bundle/prodRelease/app-prod-release.aab", __dir__)
+
+platform :android do
+  desc "Upload the prod bundle to the internal testing track"
+  lane :internal do
+    UI.user_error!("No bundle at #{AAB}; run flutter build appbundle first") unless File.exist?(AAB)
+    upload_to_play_store(
+      track: "internal",
+      aab: AAB,
+      release_status: ENV.fetch("PLAY_RELEASE_STATUS", "draft"),
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      skip_upload_changelogs: true
+    )
+  end
+
+  desc "Promote the latest internal release to another track (to:alpha for closed testing)"
+  lane :promote do |options|
+    upload_to_play_store(
+      track: "internal",
+      track_promote_to: options.fetch(:to, "alpha"),
+      release_status: ENV.fetch("PLAY_RELEASE_STATUS", "draft"),
+      skip_upload_aab: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      skip_upload_changelogs: true
+    )
+  end
+end

@@ -1,0 +1,4 @@
+# Google Play service-account key (JSON). CI writes it from the
+# PLAY_SERVICE_ACCOUNT_JSON secret; locally point the variable at your copy.
+json_key_file(ENV.fetch("PLAY_JSON_KEY_PATH", "play-service-account.json"))
+package_name("com.flowsort.flow_sort")

@@ -34,6 +34,9 @@ class FlowGame extends FlameGame {
   final bool showHints;
 
   late BoardLayout layout;
+
+  /// The layout once the board has been sized, for widgets drawn over it.
+  BoardLayout? get layoutOrNull => _builtFor == null ? null : layout;
   StreamSubscription<SessionEvent>? _sub;
   final Map<String, BinComponent> _bins = {};
   final Map<String, SwitchComponent> _switches = {};

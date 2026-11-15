@@ -910,6 +910,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sharing is not available right now.'**
   String get shareFailed;
+
+  /// Spoken item or bin colour for screen readers.
+  ///
+  /// In en, this message translates to:
+  /// **'{colour, select, red{Red} blue{Blue} green{Green} yellow{Yellow} purple{Purple} orange{Orange} pink{Pink} other{Hidden colour}}'**
+  String a11yColour(String colour);
+
+  /// No description provided for @a11yBoard.
+  ///
+  /// In en, this message translates to:
+  /// **'Game board. Next item: {next}. {lives, plural, =1{1 life} other{{lives} lives}} left. {left, plural, =1{1 item} other{{left} items}} to sort.'**
+  String a11yBoard(String next, int lives, int left);
+
+  /// No description provided for @a11yNoItem.
+  ///
+  /// In en, this message translates to:
+  /// **'none'**
+  String get a11yNoItem;
+
+  /// No description provided for @a11ySwitch.
+  ///
+  /// In en, this message translates to:
+  /// **'Switch {n}, points {dir, select, left{left} other{right}}'**
+  String a11ySwitch(int n, String dir);
+
+  /// No description provided for @a11ySwitchHint.
+  ///
+  /// In en, this message translates to:
+  /// **'flip the switch'**
+  String get a11ySwitchHint;
+
+  /// No description provided for @a11yBin.
+  ///
+  /// In en, this message translates to:
+  /// **'{colour} bin, {fill} of {capacity}'**
+  String a11yBin(String colour, int fill, int capacity);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -135,5 +135,11 @@
   "shareCardTagline": "क्या आप इसे और तेज़ सुलझा सकते हैं?",
   "shareFlips": "{n, plural, other{{n} बार स्विच पलटा}}",
   "gateShareNote": "शेयर करने पर गेम के बाहर कोई दूसरा ऐप खुलेगा।",
-  "shareFailed": "अभी शेयर नहीं किया जा सकता।"
+  "shareFailed": "अभी शेयर नहीं किया जा सकता।",
+  "a11yColour": "{colour, select, red{लाल} blue{नीला} green{हरा} yellow{पीला} purple{बैंगनी} orange{नारंगी} pink{गुलाबी} other{छिपा हुआ रंग}}",
+  "a11yBoard": "गेम बोर्ड। अगली चीज़: {next}। {lives, plural, =1{1 जान} other{{lives} जानें}} बाकी। {left, plural, =1{1 चीज़} other{{left} चीज़ें}} छाँटनी हैं।",
+  "a11yNoItem": "कोई नहीं",
+  "a11ySwitch": "स्विच {n}, {dir, select, left{बाईं} other{दाईं}} ओर",
+  "a11ySwitchHint": "स्विच पलटें",
+  "a11yBin": "{colour} डिब्बा, {capacity} में से {fill}"
 }
