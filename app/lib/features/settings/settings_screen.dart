@@ -150,12 +150,13 @@ class SettingsScreen extends ConsumerWidget {
 }
 
 /// Plain-language privacy page listing every SDK (plan §8).
-class PrivacyScreen extends StatelessWidget {
+class PrivacyScreen extends ConsumerWidget {
   const PrivacyScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final l = context.l10n;
+    final ads = ref.watch(adsServiceProvider);
     final paragraphs = [
       l.privacyData,
       l.privacyAge,
@@ -171,15 +172,23 @@ class PrivacyScreen extends StatelessWidget {
     return AppScaffold(
       title: l.privacyTitle,
       body: ContentWidth(
-        child: ListView.separated(
+        child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 28),
-          itemCount: paragraphs.length,
-          separatorBuilder: (_, __) => const SizedBox(height: 14),
-          itemBuilder:
-              (_, i) => SelectableText(
-                paragraphs[i],
-                style: Theme.of(context).textTheme.bodyLarge,
+          children: [
+            for (final p in paragraphs) ...[
+              SelectableText(p, style: Theme.of(context).textTheme.bodyLarge),
+              const SizedBox(height: 14),
+            ],
+            // Required by Google's consent rules where they apply (EEA, UK,
+            // Switzerland); never shown to minors, who get no consent form.
+            if (ads.privacyOptionsRequired)
+              OutlinedButton.icon(
+                key: const Key('privacy-ad-choices'),
+                onPressed: ads.showPrivacyOptions,
+                icon: const Icon(Icons.tune_rounded),
+                label: Text(l.privacyAdChoices),
               ),
+          ],
         ),
       ),
     );

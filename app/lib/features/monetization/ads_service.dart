@@ -27,6 +27,14 @@ abstract class AdsService {
 
   /// Shows an interstitial if one is loaded. Completes true if it was shown.
   Future<bool> showInterstitial();
+
+  /// True when the consent rules where the player is (EEA, UK, Switzerland)
+  /// require a way to change ad consent later. Only ever true for adults:
+  /// minors never see a consent form.
+  bool get privacyOptionsRequired;
+
+  /// Opens Google's form for changing ad consent.
+  Future<void> showPrivacyOptions();
 }
 
 /// How ad requests must be tagged for an age band (plan §8 table). Pure, so
@@ -123,6 +131,13 @@ class FakeAdsService implements AdsService {
     interstitialsShown++;
     return true;
   }
+
+  @override
+  bool privacyOptionsRequired = false;
+  int privacyOptionsShown = 0;
+
+  @override
+  Future<void> showPrivacyOptions() async => privacyOptionsShown++;
 }
 
 /// Used when a build has no ad configuration: no ads, no ad offers.
@@ -137,4 +152,8 @@ class NoAdsService implements AdsService {
   Future<bool> showRewarded(RewardedPlacement placement) async => false;
   @override
   Future<bool> showInterstitial() async => false;
+  @override
+  bool get privacyOptionsRequired => false;
+  @override
+  Future<void> showPrivacyOptions() async {}
 }

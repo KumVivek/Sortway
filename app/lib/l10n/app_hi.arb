@@ -141,5 +141,6 @@
   "a11yNoItem": "कोई नहीं",
   "a11ySwitch": "स्विच {n}, {dir, select, left{बाईं} other{दाईं}} ओर",
   "a11ySwitchHint": "स्विच पलटें",
-  "a11yBin": "{colour} डिब्बा, {capacity} में से {fill}"
+  "a11yBin": "{colour} डिब्बा, {capacity} में से {fill}",
+  "privacyAdChoices": "विज्ञापन प्राइवेसी विकल्प"
 }

@@ -533,4 +533,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String a11yBin(String colour, int fill, int capacity) {
     return '$colour bin, $fill of $capacity';
   }
+
+  @override
+  String get privacyAdChoices => 'Ad privacy choices';
 }

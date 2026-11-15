@@ -946,6 +946,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{colour} bin, {fill} of {capacity}'**
   String a11yBin(String colour, int fill, int capacity);
+
+  /// Button that reopens Google's ad consent form (EEA/UK/Switzerland adults only).
+  ///
+  /// In en, this message translates to:
+  /// **'Ad privacy choices'**
+  String get privacyAdChoices;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

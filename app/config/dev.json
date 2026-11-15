@@ -1,5 +1,7 @@
 {
   "FLAVOR": "dev",
-  "USE_FIREBASE": false,
-  "USE_ADMOB": true
+  "USE_FIREBASE": true,
+  "USE_ADMOB": true,
+  "PRIVACY_POLICY_URL": "https://sortway-ab78a.web.app/privacy",
+  "SUPPORT_EMAIL": "vigilwork08@gmail.com"
 }

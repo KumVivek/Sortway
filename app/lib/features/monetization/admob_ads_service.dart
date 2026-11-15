@@ -74,6 +74,21 @@ class AdMobAdsService implements AdsService {
     await _gatherConsent();
   }
 
+  bool _privacyOptionsRequired = false;
+
+  @override
+  bool get privacyOptionsRequired =>
+      _privacyOptionsRequired && _profile.mayShowConsentForm;
+
+  @override
+  Future<void> showPrivacyOptions() async {
+    if (!privacyOptionsRequired) return;
+    await ConsentForm.showPrivacyOptionsForm((error) {
+      if (error != null)
+        debugPrint('UMP privacy options form: ${error.message}');
+    });
+  }
+
   /// UMP consent (EU/UK). Minors are tagged under the age of consent, which
   /// means no form is shown to them and they only get non-personalized ads.
   Future<void> _gatherConsent() {
@@ -87,9 +102,20 @@ class AdMobAdsService implements AdsService {
         tagForUnderAgeOfConsent: _profile.tagForUnderAgeOfConsent,
       ),
       () {
-        if (!_profile.mayShowConsentForm) return finish();
-        ConsentForm.loadAndShowConsentFormIfRequired((error) {
+        if (!_profile.mayShowConsentForm) {
+          _privacyOptionsRequired = false;
+          return finish();
+        }
+        ConsentForm.loadAndShowConsentFormIfRequired((error) async {
           if (error != null) debugPrint('UMP form: ${error.message}');
+          try {
+            _privacyOptionsRequired =
+                await ConsentInformation.instance
+                    .getPrivacyOptionsRequirementStatus() ==
+                PrivacyOptionsRequirementStatus.required;
+          } on Object catch (e) {
+            debugPrint('UMP privacy options: $e');
+          }
           finish();
         });
       },

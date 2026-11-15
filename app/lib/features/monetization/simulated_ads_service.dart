@@ -19,6 +19,13 @@ class SimulatedAdsService implements AdsService {
   @override
   bool get available => true;
 
+  /// Local mode has no consent form.
+  @override
+  bool get privacyOptionsRequired => false;
+
+  @override
+  Future<void> showPrivacyOptions() async {}
+
   @override
   Future<void> initialize(AgePolicy policy) async =>
       profile = AdRequestProfile.forPolicy(policy);

@@ -389,5 +389,9 @@
         "type": "int"
       }
     }
+  },
+  "privacyAdChoices": "Ad privacy choices",
+  "@privacyAdChoices": {
+    "description": "Button that reopens Google's ad consent form (EEA/UK/Switzerland adults only)."
   }
 }
